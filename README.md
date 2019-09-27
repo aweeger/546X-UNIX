@@ -1,9 +1,9 @@
-#UNIX Assignment
+# UNIX Assignment
 Axelle Weeger
 
-##Data Inspection
+## Data Inspection
 
-###Attributes of `fang_et_al_genotypes`
+### Attributes of `fang_et_al_genotypes`
 
 ```
 wc fang_et_al_genotypes.txt 
@@ -22,7 +22,7 @@ By inspecting this file I learned that:
 6. This file is encoded in ASCII, with very long lines
 
 
-###Attributes of `snp_position`
+### Attributes of `snp_position`
 
 ```
 wc snp_position.txt 
@@ -41,9 +41,9 @@ By inspecting this file I learned that:
 6. This file is ASCII text
 
 
-##Data Processing
+## Data Processing
 
-###Prepping the files for joining
+### Prepping the files for joining
 
 
 Get maize and teosinte datasets out of `fang_et_al_genotypes` first.
@@ -119,11 +119,11 @@ awk -F "\t" '{print NF; exit}' teosinte_snp.txt
 cut -f 1-10 teosinte_snp.txt | head | column -t
 ```
 
-#Files are now joined! 
+# Files are now joined! 
 
-##Maize Data Extraction
+##M aize Data Extraction
 
-####Extract unknown and multiple SNP locations. Visualize file for quality control. 
+#### Extract unknown and multiple SNP locations. Visualize file for quality control. 
 
 Make header from `maize_snp` file. 
 
@@ -241,10 +241,10 @@ sort -k3 -r maize_snp_010hl.txt > maize_snp_010hlsr.txt | cat maize_snpHead.txt 
 
 ```
 
-###Teosinte Data Extraction
+### Teosinte Data Extraction
 
 
-####Extract unknown and multiple SNP locations. Visualize file for quality control. 
+#### Extract unknown and multiple SNP locations. Visualize file for quality control. 
 
 Make header from `teosinte_snp` file
 
